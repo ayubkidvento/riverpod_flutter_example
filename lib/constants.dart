@@ -14,3 +14,12 @@ BoxDecoration boxDecoration() => BoxDecoration(
         width: .5,
       ),
     );
+
+class ColorsConstants {
+  static const primary = Colors.blueGrey;
+}
+
+class RegexValidators {
+  static RegExp emailRegex = RegExp(
+      r"[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?");
+}

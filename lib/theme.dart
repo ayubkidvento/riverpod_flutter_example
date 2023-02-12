@@ -1,32 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:riverpod_flutter_example/constants.dart';
 
 ThemeData theme() => ThemeData(
-      toggleButtonsTheme: ToggleButtonsThemeData(
-        color: Colors.black.withOpacity(0.60),
-        selectedColor: const Color(0XFFFFFFFF),
-        selectedBorderColor: const Color(0xFFFBAA19),
-        fillColor: const Color(0xFFFBAA19),
-        splashColor: const Color(0xFFFBAA19).withOpacity(0.12),
-        hoverColor: const Color(0xFFFBAA19).withOpacity(0.04),
-        borderRadius: BorderRadius.circular(10.0),
-        constraints: const BoxConstraints(minHeight: 36.0),
-        highlightColor: Colors.transparent,
-        textStyle: textDecorationTextStyle(Colors.black54),
+      primaryColor: Colors.blueGrey,
+      textSelectionTheme: const TextSelectionThemeData(
+        cursorColor: ColorsConstants.primary,
+        selectionHandleColor: ColorsConstants.primary,
       ),
       inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        isDense: true,
         alignLabelWithHint: true,
+        fillColor: ColorsConstants.primary.withOpacity(.1),
         border: outlineInputBorder(Colors.white),
         enabledBorder: outlineInputBorder(Colors.white),
         focusedBorder: outlineInputBorder(Colors.white),
         disabledBorder: outlineInputBorder(Colors.grey),
         errorBorder: outlineInputBorder(const Color(0xFFF65054)),
         focusedErrorBorder: outlineInputBorder(const Color(0xFFF65054)),
-        labelStyle: textDecorationTextStyle(Colors.black54),
-        hintStyle: textDecorationTextStyle(Colors.black45),
+        labelStyle: textDecorationTextStyle(ColorsConstants.primary),
+        hintStyle: textDecorationTextStyle(ColorsConstants.primary),
         errorStyle: textDecorationTextStyle(Colors.red),
         helperStyle: textDecorationTextStyle(Colors.black),
-        filled: true,
-        isDense: true,
+        suffixIconColor: ColorsConstants.primary,
+        prefixIconColor: ColorsConstants.primary,
         contentPadding: const EdgeInsets.symmetric(
           vertical: 12,
           horizontal: 16,
@@ -61,5 +58,5 @@ OutlineInputBorder outlineInputBorder(Color color) => OutlineInputBorder(
         width: 1,
         color: color,
       ),
-      borderRadius: const BorderRadius.all(Radius.circular(10)),
+      borderRadius: BorderRadius.circular(10),
     );
